@@ -1,0 +1,223 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: fantasy;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+html{
+   height: 100%;
+   background-color: #fbeaff;
+
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@keyframes opacityOpen {
+   from {opacity: 0;}
+   to {opacity: 1;}
+}
+
+.modal{
+   animation: opacityOpen .3s;
+   display: none;
+
+   z-index: 10;
+   height: 100%;
+   width: 100%;
+
+   position: absolute;
+   background: rgba(0, 0, 0, 0.3);
+   align-items: center;
+   justify-content: center;
+   
+}
+
+.form{
+   background: #ccc;
+   padding: 20px 20px;
+   border-radius: 20px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+   position: relative;
+}
+.form img{
+   position: absolute;
+   right: 20px;
+   transition: all .5s ease;
+
+}
+.form img:hover{
+
+   background: #eee;
+   border-radius: 50% ;
+}
+
+#form{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 10px;
+   background: #fff;
+   padding: 50px 50px;
+   border-radius: 10px;
+   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#form input[type="text"], #form input[type="number"]{
+   height: 40px;
+   border-radius: 10px ;
+   padding-left: 5px;
+   padding-right: 5px;
+   font-size: 1.1em;
+   border: 2px solid black;
+}
+
+#form input[type="text"]:invalid,
+#form input[type="number"]:invalid{
+   border: 2px solid crimson;
+}
+
+#form input[type="checkbox"]{
+   width: 20px;
+   height: 20px;
+   
+}
+.checkbox{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.errorBox{
+   display: none;
+   color: crimson;
+   font-size: .9em;
+}
+
+#form button{
+   padding: 10px 20px;
+   border: 2px solid black;
+   border-radius: 10px;
+   background-color: #ff6f91;
+   color: white;
+   font-weight: 800;
+   font-size: 1.2em;
+   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
+   transition:box-shadow .5s ease;
+}
+
+#form button:hover{
+   box-shadow: none;
+}
+
+
+header{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   height: 10vh;
+
+   background: #845ec2;
+   box-shadow: 0px 4px 5px rgba(0, 0, 0, .3);
+   z-index: 1;
+   position: relative;
+
+
+}
+
+header button{
+   padding: 10px 20px;
+   border-radius: 10px;
+   border: 2px solid #fbeaff;
+   background: #b39cd0;
+   color: white;
+   font-size: 1.3em;
+   font-weight: 600;
+   transition: box-shadow .1s ease;
+}
+
+header button:hover{
+   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, .7);
+
+}
+
+main{
+   display: flex;
+   justify-content: center;
+}
+
+.cardContainer{
+   padding: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-shrink: initial;
+   justify-content: center;
+   width: 80vw;
+   gap: 40px;
+
+}
+
+.card{
+   width: 250px;
+   border-radius: 20px ;
+   box-shadow: 3px 3px 7px rgba(0, 0, 0, .5);
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+
+   background: #fff;
+
+   text-align: center;
+   padding: 20px;
+}
+
+.card h2, .card h3{
+   word-wrap: break-word;
+   max-width: 100%;
+}
+
+.card button{
+   padding: 10px 20px;
+   border-radius: 10px;
+   border: 2px solid black;
+   width: 140px;
+   color: white;
+   font-size: 1.3em;
+   font-weight: 600;
+}
+
+.true{
+   background: rgb(22, 211, 22);
+   box-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+}
+.true:hover{
+   background: rgb(15, 128, 15);
+}
+.true:active{
+   box-shadow:none;
+}
+
+
+.false{
+   background: crimson;
+   box-shadow: 3px 3px 7px rgba(0, 0, 0, .5);
+}
+.false:hover{
+   background:rgb(153, 15, 42);
+}
+.false:active{
+   box-shadow:none;
+}
+
