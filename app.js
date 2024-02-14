@@ -5,14 +5,25 @@ const main = document.querySelector('.cardContainer')
 
 let index_count = 1
 
-function Book(author,title,pages,read){
-   this.id = index_count;
-   this.author = author;
-   this.title = title;
-   this.pages = pages;
-   this.hasBeenRead = read;
+class Book{
+   constructor(author,title,pages,read){
+      this.id = index_count;
+      this.author = author;
+      this.title = title;
+      this.pages = pages;
+      this.hasBeenRead = read;
+   }
 
-};
+}
+
+// function Book(author,title,pages,read){
+//    this.id = index_count;
+//    this.author = author;
+//    this.title = title;
+//    this.pages = pages;
+//    this.hasBeenRead = read;
+
+// };
 
 Book.prototype.changeRead = function() {
    this.hasBeenRead = !this.hasBeenRead;
